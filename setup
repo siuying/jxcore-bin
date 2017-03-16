@@ -1,0 +1,9 @@
+#!/bin/sh
+ANDROID_URL="http://jxcore.azureedge.net/jxcore/03110/release/jx_androidFATsm.zip"
+IOS_URL="http://jxcore.azureedge.net/jxcore/03110/release/jx_iosFATsm.zip"
+OSX_URL="http://jxcore.azureedge.net/jxcore/03110/release/jx_osx64sm.zip"
+
+curl -O $ANDROID_URL && unzip jx_androidFATsm.zip -d jxcore/android &&
+  curl -O $IOS_URL && unzip jx_iosFATsm.zip -d jxcore/ios &&
+  curl -O $OSX_URL && unzip jx_osx64sm.zip -d jxcore &&
+  rm jx*.zip
